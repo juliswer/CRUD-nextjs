@@ -9,12 +9,13 @@ const Layout = ({children}) => {
 
     return (
         <div className="h-screen bg-gray-900 text-white">
-            <header className="flex bg-gray-800 px-28 py-5">
+            <header className="flex bg-gray-800 px-28 py-5 items-center">
                 <Link href="/">
                 <a>
                     <h1 className="font-black text-lg">Task App</h1>    
                 </a>
                 </Link>
+                <span className="ml-2 text-gray-400 font-bold">10 tareas</span>
                 <div className="flex-grow text-right">
                     <button className="bg-green-500 hover:bg-green-400 py-2 px-5 font-bold rounded-sm inline-flex items-center" onClick={() => router.push('/new')}><AiOutlinePlus className="mr-2" /> Add task</button>
                 </div>
