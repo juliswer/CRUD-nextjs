@@ -1,6 +1,7 @@
 import React from 'react'
 import {useTasks} from '../context/taskContext';
 import {useContext} from 'react';
+import Layout from '../components/Layout';
 
 const Home = () => {
 
@@ -9,9 +10,9 @@ const Home = () => {
   console.log(tasks);
 
   return (
-    <div>
-      Hello world
-    </div>
+    <Layout>
+      <div>Hello world</div>
+    </Layout>
   )
 }
 
