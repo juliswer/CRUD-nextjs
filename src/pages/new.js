@@ -2,6 +2,7 @@ import React from "react";
 import Layout from "../components/Layout";
 import { useState } from "react";
 import {useTasks} from '../context/taskContext';
+import {useRouter} from 'next/router';
 
 const TaskFormPage = () => {
   const [task, setTask] = useState({
@@ -11,6 +12,8 @@ const TaskFormPage = () => {
 
   const {createTask} = useTasks();
 
+  const {push} = useRouter();
+
   const handleChange = (e) => {
     const {name, value} = e.target;
     setTask({... task, [name]: value})
@@ -19,6 +22,7 @@ const TaskFormPage = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
     createTask(task.title, task.description)
+    push("/");
   }
 
   return (
