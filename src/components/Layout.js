@@ -6,9 +6,10 @@ const Layout = ({children}) => {
             <header>
                 <h1>Task App</h1>
                 <div>
-                    <button>Agregar Tarea</button>
+                    <button>Add task</button>
                 </div>
             </header>
+            <hr />
             {children}
         </div>
     )
