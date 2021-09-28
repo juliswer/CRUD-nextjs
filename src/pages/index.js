@@ -1,11 +1,12 @@
 import React from 'react'
-import {TaskContext} from '../context/taskContext';
+import {useTasks} from '../context/taskContext';
 import {useContext} from 'react';
 
 const Home = () => {
 
-  const {hello} = useContext(TaskContext)
-  console.log(hello);
+  const {tasks} = useTasks();
+
+  console.log(tasks);
 
   return (
     <div>
