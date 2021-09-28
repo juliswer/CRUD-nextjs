@@ -1,5 +1,5 @@
 import React from "react";
-import { useTasks } from "../context/taskContext";
+import { useTasks } from "../context/TasksContext";
 import Layout from "../components/Layout";
 import { useRouter } from "next/router";
 import { VscTrash, VscTasklist } from "react-icons/vsc";
